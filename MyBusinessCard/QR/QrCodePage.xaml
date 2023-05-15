@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:maui="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+  xmlns:qr="clr-namespace:MyBusinessCard.QR"
+  x:Class="MyBusinessCard.QR.QrCodePage"
+  x:DataType="qr:QrCodeViewModel"
+  Shell.PresentationMode="ModalAnimated"
+  Title="QrCodePage">
+
+  <VerticalStackLayout>
+
+    <Label
+      Text="{Binding Title}"
+      HorizontalOptions="Center"
+      HorizontalTextAlignment="Center" />
+
+    <maui:BarcodeImage
+      WidthRequest="300"
+      HeightRequest="300"
+      BarcodeWidth="300"
+      BarcodeHeight="300"
+      Margin="5"
+      BarcodeMargin="5"
+      BarcodeBackground="White"
+      BarcodeForeground="Black"
+      BarcodeFormat="QR_CODE"
+      Barcode="{Binding Link}" />
+  </VerticalStackLayout>
+
+</ContentPage>
