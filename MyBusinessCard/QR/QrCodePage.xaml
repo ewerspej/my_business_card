@@ -10,7 +10,7 @@
   Shell.NavBarIsVisible="False">
 
   <Grid
-    RowDefinitions="auto, *"
+    RowDefinitions="auto, *,auto, auto"
     Margin="0"
     Padding="10">
 
@@ -34,6 +34,17 @@
       BarcodeForeground="Black"
       BarcodeFormat="QR_CODE"
       Barcode="{Binding Link}" />
+
+    <Label
+      Grid.Row="2"
+      Text="{Binding Link}"
+      HorizontalOptions="Center" />
+
+    <Button
+      Grid.Row="3"
+      Text="Back"
+      Clicked="OnBackButtonClicked" />
+
   </Grid>
 
 </ContentPage>
