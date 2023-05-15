@@ -10,9 +10,10 @@
   Shell.NavBarIsVisible="False">
 
   <Grid
-    RowDefinitions="auto, *,auto, auto"
+    RowDefinitions="80,auto, *, auto, auto"
+    RowSpacing="10"
     Margin="0"
-    Padding="10">
+    Padding="20">
 
     <Label
       Grid.Row="0"
@@ -21,8 +22,14 @@
       HorizontalOptions="Center"
       HorizontalTextAlignment="Center" />
 
-    <maui:BarcodeImage
+    <Label
       Grid.Row="1"
+      Text="{Binding Link}"
+      FontSize="Large"
+      HorizontalOptions="Center" />
+
+    <maui:BarcodeImage
+      Grid.Row="2"
       VerticalOptions="Center"
       HorizontalOptions="Center"
       WidthRequest="300"
@@ -35,13 +42,13 @@
       BarcodeFormat="QR_CODE"
       Barcode="{Binding Link}" />
 
-    <Label
-      Grid.Row="2"
-      Text="{Binding Link}"
-      HorizontalOptions="Center" />
-
     <Button
       Grid.Row="3"
+      Text="Share"
+      Clicked="OnShareButtonClicked" />
+
+    <Button
+      Grid.Row="4"
       Text="Back"
       Clicked="OnBackButtonClicked" />
 
