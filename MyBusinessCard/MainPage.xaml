@@ -6,16 +6,46 @@
   Shell.NavBarIsVisible="False">
 
   <ScrollView>
-    <VerticalStackLayout
-      Spacing="25"
-      Padding="30,0"
-      VerticalOptions="Center">
+    <Grid RowDefinitions="3*,*,3*">
 
-      <Button Text="LinkedIn" Clicked="OnLinkedInButtonClicked" />
-      <Button Text="Blog" Clicked="OnBlogClicked" />
-      <Button Text="Web" Clicked="OnWebButtonClicked" />
+      <Frame
+        Grid.Row="0"
+        CornerRadius="100"
+        WidthRequest="200"
+        HeightRequest="200">
+        <Image
+          Source="julian.png"
+          VerticalOptions="Center"
+          HorizontalOptions="Center"
+          WidthRequest="200"
+          HeightRequest="200" />
+      </Frame>
 
-    </VerticalStackLayout>
+      <Label
+        Grid.Row="1"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        HorizontalTextAlignment="Center"
+        Text="Julian Ewers-Peters"
+        FontSize="Title" />
+
+      <VerticalStackLayout
+        Grid.Row="2"
+        Spacing="10"
+        Padding="30,0"
+        VerticalOptions="Center">
+        <Button
+          Text="LinkedIn"
+          Clicked="OnLinkedInButtonClicked" />
+        <Button
+          Text="Blog"
+          Clicked="OnBlogClicked" />
+        <Button
+          Text="Web"
+          Clicked="OnWebButtonClicked" />
+      </VerticalStackLayout>
+    </Grid>
+
   </ScrollView>
 
 </ContentPage>
