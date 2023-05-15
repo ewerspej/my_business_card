@@ -7,26 +7,33 @@
   x:Class="MyBusinessCard.QR.QrCodePage"
   x:DataType="qr:QrCodeViewModel"
   Shell.PresentationMode="ModalAnimated"
-  Title="QrCodePage">
+  Shell.NavBarIsVisible="False">
 
-  <VerticalStackLayout>
+  <Grid
+    RowDefinitions="auto, *"
+    Margin="0"
+    Padding="10">
 
     <Label
+      Grid.Row="0"
       Text="{Binding Title}"
+      FontSize="Title"
       HorizontalOptions="Center"
       HorizontalTextAlignment="Center" />
 
     <maui:BarcodeImage
+      Grid.Row="1"
+      VerticalOptions="Center"
+      HorizontalOptions="Center"
       WidthRequest="300"
       HeightRequest="300"
       BarcodeWidth="300"
       BarcodeHeight="300"
-      Margin="5"
       BarcodeMargin="5"
       BarcodeBackground="White"
       BarcodeForeground="Black"
       BarcodeFormat="QR_CODE"
       Barcode="{Binding Link}" />
-  </VerticalStackLayout>
+  </Grid>
 
 </ContentPage>

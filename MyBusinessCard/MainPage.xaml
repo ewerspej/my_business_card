@@ -2,8 +2,8 @@
 <ContentPage
   xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-  xmlns:maui="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
-  x:Class="MyBusinessCard.MainPage">
+  x:Class="MyBusinessCard.MainPage"
+  Shell.NavBarIsVisible="False">
 
   <ScrollView>
     <VerticalStackLayout
@@ -12,6 +12,8 @@
       VerticalOptions="Center">
 
       <Button Text="LinkedIn" Clicked="OnLinkedInButtonClicked" />
+      <Button Text="Blog" Clicked="OnBlogClicked" />
+      <Button Text="Web" Clicked="OnWebButtonClicked" />
 
     </VerticalStackLayout>
   </ScrollView>
